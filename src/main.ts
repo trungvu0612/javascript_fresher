@@ -1,6 +1,6 @@
 import './style.css'
-import {countries} from "./country";
-import {webTechs} from "./web_techs";
+// import {countries} from "./country";
+// import {webTechs} from "./web_techs";
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -156,15 +156,14 @@ let text: string = 'I love teaching and empowering people. I teach HTML, CSS, JS
 console.log(text);
 const newString = text.split(".").join(" ");
 console.log(newString)
-const newString1 = newString.split(",").join(" ");
+const newString1 = newString.split(",").join("");
 console.log(newString1)
-const newString2 = newString1.split(" ");
+const newString2 = newString1.split(" ")
 let i: number;
-for(i=0; i < newString2.length; i++){
-    if(newString2[i]==""){
-
-    }
+for(i=0; i<newString2.length; i++){
+    if(newString2[i]===""){
+        newString2.splice(i, 1)
+    };
 }
-console.log(newString2.length)
-
+console.log(newString2, newString2.length)
 
