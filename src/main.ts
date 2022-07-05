@@ -1,5 +1,4 @@
 import './style.css'
-import './Conditionals/level1'
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
