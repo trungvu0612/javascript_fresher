@@ -59,29 +59,38 @@ if (enterUser !== null) {
 } else {
     console.log("Please enter correct!")
 }
+enum weekDays {
+    Monday = "Monday",
+    Tuesday = "Tuesday",
+    Wednesday = "Wednesday",
+    Thursday = "Thursday",
+    Friday = "Friday",
+    Saturday = "Saturday",
+    Sunday = "Sunday"
+ }
 
 // 3. Check if a day is weekend day or a working day. Your script will take day as an input.
 let day: string | null = prompt(" What is the day  today?")
 switch (day) {
-    case "Monday":
+    case weekDays.Monday:
         console.log("Monday is a working day")
         break
-    case "Tuesday":
+    case weekDays.Tuesday:
         console.log("Tuesday is a working day")
         break
-    case "Wednesday":
+    case weekDays.Wednesday:
         console.log("Wednesday is a working day")
         break
-    case "Thursday":
+    case weekDays.Thursday:
         console.log("Thursday is a working day")
         break
-    case "Friday":
+    case weekDays.Friday:
         console.log("Friday is a working day")
         break
-    case "Saturday":
+    case weekDays.Saturday:
         console.log("Saturday is a weekend")
         break
-    case "Sunday":
+    case weekDays.Sunday:
         console.log("Sunday is a weekend")
         break
     default:
