@@ -105,10 +105,10 @@ const products = [
 
 console.log(users)
 // register
-let form: HTMLFormElement = document.querySelector("#form_submit")!;
-form.onsubmit = (e) => {
+let signUp: HTMLFormElement = document.querySelector("#form_submit")!;
+signUp.onsubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(form);
+    const data = new FormData(signUp);
     const username = data.get('username') as any;
     const password = data.get('password') as any;
     for (let i = 0; i < users.length; i++) {
@@ -134,10 +134,10 @@ form.onsubmit = (e) => {
     return false;
 };
 // login
-let formLogin: HTMLFormElement = document.querySelector("#login_form")!;
-formLogin.onsubmit = (e) => {
+let signIn: HTMLFormElement = document.querySelector("#login_form")!;
+signIn.onsubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(formLogin);
+    const data = new FormData(signIn);
     const username = data.get('username1') as any;
     const password = data.get('password1') as any;
     for (let i = 0; i < users.length; i++) {
@@ -157,22 +157,41 @@ formLogin.onsubmit = (e) => {
     return false;
 };
 // Rating
-const rating = document.querySelectorAll("#rating");
-let formRating: HTMLFormElement = document.querySelector("#rating")!;
-formRating.onsubmit = (e: any) => {
+let rateProduct: HTMLFormElement = document.querySelector("#rating")!;
+rateProduct.onsubmit = (e: any) => {
     e.preventDefault()
-    let formRatingUser = new FormData(formRating)
+    let formRatingUser = new FormData(rateProduct)
     let nameProduct = formRatingUser.get("name-product");
     let ratingChoose = formRatingUser.get("fav_language");
     for (let i = 0; i < products.length; i++) {
         if (nameProduct === products[i].name) {
+            const newRating = {
+                userId: 'fg12cy', rate: parseInt(`${ratingChoose}`)
+            }
+            products[i].ratings.push(newRating)
             console.log(products[i])
         }
     }
     return false;
 }
 
+function AverageRating() {
+    for (let i = 0; i < products.length; i++) {
+        let arrRate = [];
+        let ave = 0;
+        for (let a = 0; a < products[i].ratings.length; a++) {
+            if (products[i].ratings !== []) {
+                arrRate.push(products[i].ratings[a].rate)
+            }
+        }
+        for (let b = 0; b < arrRate.length; b++) {
+            ave = (ave + arrRate[b])
+        }
+        console.log(ave / arrRate.length)
+    }
+}
 
+AverageRating()
 
 
 
