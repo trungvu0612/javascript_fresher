@@ -49,7 +49,7 @@ console.log("*first item:" + arrayFour[0], "*middle item:" + arrayFour[middleIte
 
 // 5. Declare an array called mixedDataTypes,
 // put different data types in the array and find the length of the array. The array size should be greater than 5.
-const mixedDataTypes: Array<any> = ["apple", 1, 2, "egg", 3, "pineapple", 4, "lemon", "meat", 5];
+const mixedDataTypes: any[] = ["apple", 1, 2, "egg", 3, "pineapple", 4, "lemon", "meat", 5];
 
 console.log(mixedDataTypes.length);
 // 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
