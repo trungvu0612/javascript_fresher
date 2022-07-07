@@ -63,7 +63,16 @@ app.innerHTML = `
   </form>
 `
 
-const users = [
+export interface Users {
+    _id: string
+    username: string
+    email: string
+    password: string
+    createdAt: string
+    isLoggedIn: boolean
+}
+
+const users: Users[] = [
     {
         _id: 'ab12ex',
         username: 'Alex',
@@ -106,7 +115,21 @@ const users = [
     },
 ]
 
-const products = [
+export interface Products {
+    _id: string
+    name: string
+    description: string
+    price: number
+    ratings: Rating[]
+    likes: any[]
+}
+
+export interface Rating {
+    userId: string
+    rate: number
+}
+
+const products: Products[] = [
     {
         _id: 'eedfcf',
         name: 'mobile phone',
@@ -136,7 +159,7 @@ const products = [
     },
 ]
 
-console.log(users)
+
 // 2.a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
 // register
 let signUp: HTMLFormElement = document.querySelector("#form_submit")!;

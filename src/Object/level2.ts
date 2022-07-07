@@ -1,7 +1,72 @@
+export interface Alex {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Asab {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Brook {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Daniel {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface John {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Thomas {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Paul {
+    email: string;
+    skills: string[];
+    age: number;
+    isLoggedIn: boolean;
+    points: number;
+}
+
+export interface Users {
+    Alex: Alex;
+    Asab: Asab;
+    Brook: Brook;
+    Daniel: Daniel;
+    John: John;
+    Thomas: Thomas;
+    Paul: Paul;
+}
 
 
 // // Exercises: Level 2
-let users = {
+let users: Users = {
     Alex: {
         email: 'alex@alex.com',
         skills: ['HTML', 'CSS', 'JavaScript'],
@@ -132,6 +197,6 @@ function setName() {
 // 7. Use the countries object to print a country name, capital, populations and languages.
 function countriess() {
     let countries = {name: "Viêt Nam", capital: "Hà Nội", populations: " 9tr", languages: "Vietnamese"}
-    console.log(countries)  
+    console.log(countries)
 }
 

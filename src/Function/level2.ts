@@ -142,6 +142,10 @@ const sumAr = (...number: number[]) => {
 // 11. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 function userIdGenerator() {
     let idArr = "41XTDbE";
+    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    for (let i = 0; i < 8; i++) {
+        idArr += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
     return idArr
 }
 
