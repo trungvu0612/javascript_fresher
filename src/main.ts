@@ -48,11 +48,15 @@ class Statistics {
     }
 
     min() {
-        return Math.min.apply();
+        return this.ages != undefined ? Math.min.apply(Math, this.ages) : alert("error");
+    }
+
+    max() {
+        return this.ages != undefined ? Math.max.apply(Math, this.ages) : alert("error");
     }
 }
 
 const ageStudent = new Statistics();
-ageStudent.ages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 5, 6,];
-console.log(ageStudent.min())
+ageStudent.ages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 5, 6, 12];
+console.log(ageStudent.max())
 
