@@ -61,6 +61,7 @@ const date: Date = {
     time: "04:08",
 }
 
+
 function showDateTime(date: { day: string, time: string }) {
     console.log(date.day, date.time);
 }
