@@ -94,7 +94,7 @@ const check = products.some((item) => {
 console.log(check)
 
 // 11. Check if all the products have price value
-const check = products.every((item) => {
+const checkALL = products.every((item) => {
     return item.price === "" || item.price === " ";
 })
-console.log(check)
+console.log(checkALL)
