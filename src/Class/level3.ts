@@ -38,16 +38,15 @@ class Statistics {
     mean() {
         return this.ages != undefined ? Math.floor(this.ages?.reduce((pre, cur) => {
             return pre + cur;
-        }, 0) / this.ages?.length): alert("error");
+        }, 0) / this.ages?.length) : alert("error");
     }
 
     median() {
-        return this.ages != undefined ? this.ages?.sort(function (a,b){return a-b})[Math.floor(this.ages.length /2)] : alert("error");
+        return this.ages != undefined ? this.ages?.sort(function (a, b) {
+            return a - b
+        })[Math.floor(this.ages.length / 2)] : alert("error");
     }
-
-    mode() {
-        
-    }
+    
 }
 
 const ageStudent = new Statistics();
